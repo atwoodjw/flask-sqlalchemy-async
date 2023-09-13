@@ -1,0 +1,29 @@
+[tool.black]
+line-length = 120
+target-version = ['py38']
+
+[tool.isort]
+line_length = 120
+profile = "black"
+skip_gitignore = true
+
+[tool.poetry]
+name = "flask-sqlalchemy-async"
+version = "0.1.0"
+description = ""
+authors = ["Jeremiah Atwood <mail@atwoodjw.com>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+aiomysql = "^0.2.0"
+asyncio = "^3.4.3"
+Flask = { extras = ["async"], version = "^2.3.3" }
+Flask-SQLAlchemy = "^3.1.1"
+greenlet = "^2.0.2"
+python = "3.8.5"
+python-dotenv = "^1.0.0"
+SQLAlchemy = {extras = ["asyncio"], version = "^2.0.20"}
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
